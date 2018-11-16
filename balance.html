@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MAN Bank</title>
+</head>
+<body>
+    <div id="top_links">        
+        <div id="header">
+            <h2>
+                “Everyday is a bank account, and time is our currency. No one is rich, no one is poor, we've got 24 hours each.”</h2>
+            <h2>― Christopher Rice</h2>
+        </div>
+
+
+        <div id="navigation">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="create.html">New Account</a></li>
+                    <li><a href="deposit.html">Deposit</a></li>
+                    <li><a href="withdraw.html">Withdraw</a></li>
+                    <li><a href="transfer.html">Transfer</a></li>
+                    <li><a href="close.html">Close A/C</a></li>
+                    <li><a href="about.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ's</a></li>
+                </ul>
+        </div>
+        
+    <div id="create">
+            <form action="php/balance_db.php" method="POST" id="form">
+                <table align="center">
+                <tr align="center">
+                    <td colspan="2" align="center"><img src="images/img_balance.png" width="150px" height="150px" alt=""></td>
+                </tr>
+                <tr>
+                    <td><label for="usn">Enter Username:-</label></td>
+                    <td><input type="text" name="usn" placeholder="Your Username"></td>
+                </tr>
+                <tr>
+                    <td><label for="pwd">Password:-</label></td>
+                    <td><input type="password" name="pwd" placeholder="Your Password"></td>
+                </tr>
+                <tr id="s">
+                        <td><input type="submit" value="Submit" ></td>
+                        <td><input type="reset" value="Reset" ></td>
+                </tr>
+                </table>
+            </form>
+            </div>  
+        <div id="footer_top">
+            <div id="footer_navigation">
+                    <p>IMPORTANT : MAN Bank never asks for your user id/password/pin no. through phone call/SMSes/e-mails. Please do not respond to any such phone call/SMSes/e-mails. Any such phone calls/SMSes/E-mails asking you to reveal your login credentials or One Time Password through SMS could be an attempt to withdraw money from your account. NEVER NEVER share these details to anyone.</p><br><br><br>                     
+                <h6 align="center">Copyright © MAN Bank Inc 2018 </h6>    </div>
+        </div>
+</body>
+</html>

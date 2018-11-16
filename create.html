@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MAN Bank</title>
+</head>
+<body>
+    <div id="top_links">        
+        <div id="header">
+            <h2>
+                “Everyday is a bank account, and time is our currency. No one is rich, no one is poor, we've got 24 hours each.”</h2>
+            <h2>― Christopher Rice</h2>
+        </div>
+
+
+        <div id="navigation">
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="balance.html">Balance</a></li>
+                    <li><a href="deposit.html">Deposit</a></li>
+                    <li><a href="withdraw.html">Withdraw</a></li>
+                    <li><a href="transfer.html">Transfer</a></li>
+                    <li><a href="close.html">Close A/C</a></li>
+                    <li><a href="about.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ's</a></li>
+                </ul>
+        </div><br><br><br>
+        <div id="create">
+            <form action="php/create_db.php" id="form" method="POST">
+                <table align="center">
+                    <tr>
+                        <td colspan="2" align="center"><img src="images/img_signup.png" alt="" width="150px"  height="150px"></td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td><label for="usn">User Name:- </label></td>
+                        <td><input type="text" name="usn" placeholder="Your Name"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">E-mails:- </label></td>
+                        <td><input type="email" name="email" placeholder="Your email"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phno">Phone number:- </label></td>
+                        <td><input type="text" name="phno" placeholder="Your Phone Number"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="addr">Address:- </label></td>
+                        <td><input type="text" name="addr" placeholder="Enter your Adress"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="pwd">Password:- </label></td>
+                        <td><input type="password" name="pwd" placeholder="Enter your Password"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="rpwd">Confirm password:- </label></td>
+                        <td><input type="password" name="rpwd" placeholder="Re-enter-passwword"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dep">Deposit amount:- </label></td>
+                        <td><input type="number" name="dep" placeholder="In INR"><br></td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr align="center"  id="s" >
+                           <td><input type="submit" value="Submit" ></td>
+                           <td><input type="reset" value="Reset" ></td>
+                    </tr>
+                </table>
+            </form>
+        </div><br><br>
+        <div id="footer_top">
+            <div id="footer_navigation">
+                    <p>IMPORTANT : MAN Bank never asks for your user id/password/pin no. through phone call/SMSes/e-mails. Please do not respond to any such phone call/SMSes/e-mails. Any such phone calls/SMSes/E-mails asking you to reveal your login credentials or One Time Password through SMS could be an attempt to withdraw money from your account. NEVER NEVER share these details to anyone.</p><br><br><br>                     
+                <h6 align="center">Copyright © MAN Bank Inc 2018 </h6>    </div>
+        </div>
+</body>
+</html>
