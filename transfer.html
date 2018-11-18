@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MAN Bank</title>
-</head>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/4807B2E1-3947-BA4D-84A6-0AC8ABE7D670/main.js" charset="UTF-8"></script></head>
 <body>
     <div id="top_links">        
         <div id="header">
@@ -30,7 +30,7 @@
         </div>
         
     <div id="create">
-            <form action="" method="POST" id="form">
+            <form action="transfer_db.php" method="POST" id="form">
                 <table align="center">
                 <tr align="center">
                     <td colspan="2" align="center"><img src="images/img_login.png" width="150px" height="150px" alt=""></td>
@@ -48,12 +48,12 @@
                     <td><input type="number" name="dep" placeholder="In INR"></td>
                 </tr>
                 <tr>
-                        <td><label for="dep">Confirm Amount:-</label></td>
-                        <td><input type="number" name="dep" placeholder="In INR"></td>
+                        <td><label for="c_dep">Confirm Amount:-</label></td>
+                        <td><input type="number" name="c_dep" placeholder="In INR"></td>
                 </tr>
                 <tr>
-                    <td><label for="acc">Account number</label></td>
-                    <td><input type="number" name="acc" placeholder="Acc number to be transferred"></td>
+                    <td><label for="to_usn">Account USN</label></td>
+                    <td><input type="text" name="to_usn" placeholder="Acc USN to be transferred"></td>
                 </tr>
                 <tr id="s">
                         <td><input type="submit" value="Submit" ></td>
