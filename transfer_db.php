@@ -43,6 +43,18 @@
     $to_usn=$_POST['to_usn'];
 }
 
+$select = "SELECT * FROM MAN_Bank_logs";
+$result = mysqli_query( $conn,$select );
+while($row = mysqli_fetch_array($result))
+if($to_usn==$row['USN']) break;
+if($to_usn==$row['USN']){
+$select = "SELECT * FROM MAN_Bank_logs";
+$result = mysqli_query( $conn,$select );
+while($row = mysqli_fetch_array($result))
+if($usn==$row['USN']) break;
+if($pwd==$row['PASS'])
+{
+
 $select= "SELECT * FROM MAN_Bank_logs";
 $result = mysqli_query( $conn,$select );
 $exist=0;
@@ -63,7 +75,7 @@ while($row = mysqli_fetch_array($result))
             }
             else{
                 echo "<p ><br><br>";
-                echo "<h2 id='php_p'>Balance not Available</h2>";
+                echo "<h3>Balance not Available</h3>";
                 echo "<br><br><br><br><br><br><br><br><br><br></p>";
                 $forward=0;
                 break;
@@ -131,8 +143,8 @@ while($row = mysqli_fetch_array($result))
 
             function passdisp($usn,$conn2)
     {
-        $select= "SELECT * FROM $usn";
-        $result = mysqli_query( $conn2,$select );
+        // $select= "SELECT * FROM $usn";
+        // $result = mysqli_query( $conn2,$select );
         echo "<br><br><div><table id='php_table' border='collapse'>"; 
         echo "<tr>"; 
         echo "<td>Transaction ID</td>"; 
@@ -141,26 +153,54 @@ while($row = mysqli_fetch_array($result))
         // echo "<td>AMOUNT</td>";
         echo "</tr>";
 
-
-
+        $select= "SELECT * FROM $usn";
+        $result = mysqli_query( $conn2,$select );
         while($row = mysqli_fetch_array($result))
         {
-         
-        echo "<td>".$row['TID']."</td>"; 
+            if($row['TID']=='2018001'){
+        echo "<tr>";  
+        echo "<td>".$usn."_".$row['TID']."</td>"; 
         echo "<td>".$row['T_TYPE']."</td>"; 
         echo "<td>".$row['AMT']."</td>"; 
         echo "</tr>";
+            }
+        }
 
+        $select= "SELECT * FROM $usn";
+        $result = mysqli_query( $conn2,$select );
+        while($row = mysqli_fetch_array($result))
+        {
+            if($row['TID']!='2018001'){
+        echo "<tr>";  
+        echo "<td>".$usn."_".$row['TID']."</td>"; 
+        echo "<td>".$row['T_TYPE']."</td>"; 
+        echo "<td>".$row['AMT']."</td>"; 
+        echo "</tr>";
+            }
         }
         echo "</table></div>";
     }
     passdisp($usn,$conn2);
     }
-    if(!$exist) echo "<br><br><h1 id='php_p'>$usn Doesnot Exist</h1>";
-
+    if(!$exist) echo "<br><br><h3>$usn Doesnot Exist</h3>";
 
 
     }
+    else
+echo "<br><br><h3>Transfer Amount donot match.</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+
+
+
+
+
+}
+else
+echo "<br><br><h3>Username and Password donot match</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+}
+else
+echo "<br><br><h3>To Username doesnot exists.</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+
+
 mysqli_close($conn);
 ?>
 <br><br><br><br>

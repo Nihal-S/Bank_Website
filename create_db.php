@@ -44,6 +44,7 @@
     $PHONE = $_POST['phno'];
 	$ADDR = $_POST['addr'];
     $PWD = $_POST['pwd'];
+    $C_PWD = $_POST['c_pwd'];
 	$AMOUNT = $_POST['dep'];
     } 
     $usn_array = array();
@@ -60,8 +61,8 @@
 //     mysqli_query($conn,$sql_user);
 
 
-
-
+if($C_PWD == $PWD)
+{
 $select= "SELECT * FROM MAN_Bank_logs";
 $result = mysqli_query( $conn,$select );
 $exist=0;
@@ -140,8 +141,10 @@ passbook($USN,$type, $AMOUNT,$conn2);
     }
     passdisp($USN,$conn2);
 }
-if($exist)  echo "<br><br><h2 id='php_p'>Username Exists. Try another Name</h2><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
-
+if($exist)  echo "<br><br><h3>Username Exists. Try another Name</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+}
+else
+echo "<br><br><h3>Passwords Donot Match. Try another time</h3><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
 
 
 

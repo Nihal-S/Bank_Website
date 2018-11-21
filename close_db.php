@@ -47,6 +47,12 @@
 // $exist=0;
 // while($row = mysqli_fetch_array($result))
 //     if(($usn==$row['USN'])) $exist=1;
+$select= "SELECT * FROM MAN_Bank_logs";
+$result = mysqli_query( $conn,$select );
+$exist=0;
+while($row = mysqli_fetch_array($result))
+    if(($USN==$row['USN'])) break;
+    if(($USN==$row['USN'])){
 
    $select = "SELECT * FROM MAN_Bank_logs";
    $result = mysqli_query( $conn,$select );
@@ -68,7 +74,7 @@
        }
        elseif(($USN==$row['USN'])&&($PWD!=$row['PASS']))
        {
-        echo "<h2 id='php_p'>Wrong Password<br><br><br><br><br><br><br><br><br><br></h2>";
+        echo "<h3>Username and Password donot match<br><br><br><br><br><br><br><br><br><br></h3>";
         $forward=0;
         break;
         }   
@@ -76,8 +82,10 @@
 }
 
 if($forward)
-echo"<h2 id='php_p'> ACCOUNT CLOSED</h2><br><br><br><br><br><br><br><br>";
-
+echo"<h3> ACCOUNT CLOSED</h3><br><br><br><br><br><br><br><br>";
+    }
+    else
+        echo "<br><br><h3>$USN Doesnot Exist</h3><br><br><br><br><br><br><br><br><br><br><br><br>";
 
 
 mysqli_close($conn);

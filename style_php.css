@@ -90,6 +90,20 @@ ul{
 	background: #FFD700;
 }
 
+#php_table1
+{
+	width: 100%;
+	border:rgba(25, 25, 25, 0);
+}
+
+#php_table1
+{
+	color:#000000;
+	background: #FFD700;
+}
+
+
+
 #php_table tr td
 {
 	font:bold 24px/18px Arial, Helvetica, sans-serif;
@@ -99,6 +113,14 @@ ul{
 	padding:5px 15px 0 15px;
 }
 
+#php_table1 tr td
+{
+	font:bold 24px/18px Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	color:#FFD700;
+	box-align: center;
+	padding:5px 15px 0 15px;
+}
 
 #content1 h2
 {
